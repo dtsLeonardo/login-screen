@@ -1,0 +1,35 @@
+<mat-card class="tw-min-w-80 tw-rounded tw-p-6">
+    <form class="tw-flex tw-flex-col tw-gap-1" [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+      <mat-form-field>
+        <mat-label>Nome Completo</mat-label>
+        <input matInput placeholder="Nome Completo" formControlName="fullname" />
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Email</mat-label>
+        <input matInput placeholder="Email" formControlName="email" />
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Usuario</mat-label>
+        <input matInput placeholder="Usuario" formControlName="username" />
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Data de Nascimento</mat-label>
+        <input matInput placeholder="Data de Nascimento" formControlName="dateOfBirth" />
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Senha</mat-label>
+        <input matInput placeholder="Senha" type="password" formControlName="password" />
+      </mat-form-field>
+
+      <div class="tw-flex tw-flex-row tw-justify-between tw-gap-1">
+        <button mat-flat-button color="primary" type="submit">Registrar</button>
+        <button mat-stroked-button color="accent" type="button" [routerLink]="['/login']">Voltar</button>
+      </div>
+
+      <div *ngIf="errorMessage" class="tw-mt-2 tw-text-red-500">{{ errorMessage }}</div>
+    </form>
+</mat-card>
