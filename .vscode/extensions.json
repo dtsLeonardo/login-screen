@@ -1,0 +1,13 @@
+{
+  "recommendations": [
+    "esbenp.prettier-vscode",
+    "angular.ng-template",
+    "editorconfig.editorconfig",
+    "naumovs.color-highlight",
+    "bradlc.vscode-tailwindcss",
+    "dbaeumer.vscode-eslint",
+    "aaron-bond.better-comments",
+    "formulahendry.auto-close-tag",
+    "usernamehw.errorlens",
+  ]
+}
