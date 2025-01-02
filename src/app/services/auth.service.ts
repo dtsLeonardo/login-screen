@@ -26,6 +26,7 @@ export default class AuthService {
 
   public async signup(newUser: UserWithPassword): Promise<User> {
     await delay(500); // Simulate HTTP request delay
+    //localStorage.removeItem(USERS_KEY);
     const users = await this.getUsers();
 
     const existingUser = users.find((u) => u.username === newUser.username || u.email === newUser.email);
